@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="question_3" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.2.3.17. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">www.powerbuy.co.th</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">coreapi-v2.powerbuy.co.th</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Open HomePage_20%" enabled="true">
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <FloatProperty>
+            <name>ThroughputController.percentThroughput</name>
+            <value>20.0</value>
+            <savedValue>0.0</savedValue>
+          </FloatProperty>
+        </ThroughputController>
+        <hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Step 1: Open HomePage" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get HomePage" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">en</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                    <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+                <stringProp name="RandomTimer.range">0.0</stringProp>
+                <stringProp name="ConstantTimer.delay">0</stringProp>
+                <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://coreapi-v2.powerbuy.co.th/graphql_Step 1" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;operationName&quot;:&quot;categories&quot;,&quot;variables&quot;:{},&quot;query&quot;:&quot;query categories {\n  categories {\n    entity_id\n    parent_id\n    name\n    is_active\n    position\n    level\n    path\n    include_in_menu\n    product_count\n    children\n    children_count\n    url_key\n    url_path\n    virtual_category_root\n    segment_information\n    image_icon_tablet\n    image_mobile\n    image\n    icon\n  }\n}\n&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://coreapi-v2.powerbuy.co.th/graphql_Step 1" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;operationName&quot;:&quot;cart&quot;,&quot;variables&quot;:{&quot;isGuest&quot;:true,&quot;cartId&quot;:&quot;Kq1sBkU9jIZwTodFXd8FAZ8eJET4hryQ&quot;},&quot;query&quot;:&quot;query cart($isGuest: Boolean, $cartId: String) {\n  cart(isGuest: $isGuest, cartId: $cartId) {\n    ...cartFragment\n    items {\n      item_id\n      sku\n      qty\n      name\n      price\n      product_type\n      quote_id\n      row_total\n      row_total_incl_tax\n      row_total_with_discount\n      tax_amount\n      discount_percent\n      discount_amount\n      price_incl_tax\n      total_price\n      extension_attributes {\n        free_items {\n          sku\n          qty\n          cart_id\n          sales_rule_id\n          sales_rule_action_type\n          sales_rule_action_apply\n          product {\n            sku\n            name\n            image\n            price\n            special_price\n            extension_attributes {\n              salable\n            }\n            marketplace {\n              ...marketPlaceSellerFragment\n            }\n          }\n        }\n        free_items_added {\n          quote_id\n          item_id\n          sku\n          sales_rule_id\n          qty\n          intent_qty\n          for_item_id\n          associated_item_id\n          product {\n            sku\n            name\n            image\n            price\n            special_price\n            extension_attributes {\n              salable\n              brand {\n                ...productBrandFragment\n              }\n            }\n            custom_attributes_option\n            marketplace {\n              ...marketPlaceSellerFragment\n            }\n          }\n        }\n        shipping_assignment {\n          shipping_method\n        }\n        salable_quantity\n        configurable_product_labels\n        parent_sku\n      }\n      row_total\n      row_total_incl_tax\n      row_total_with_discount\n      tax_amount\n      discount_percent\n      discount_amount\n      price_incl_tax\n      options {\n        label\n        value\n      }\n      product {\n        ...productFragment\n      }\n    }\n    totals {\n      grand_total\n      base_grand_total\n      subtotal\n      discount_amount\n      subtotal_with_discount\n      shipping_amount\n      shipping_discount_amount\n      tax_amount\n      shipping_tax_amount\n      subtotal_incl_tax\n      shipping_incl_tax\n      extension_attributes {\n        surcharge\n        t1c_earn_points_estimate\n        t1c_maximum_redeemable_points\n      }\n      coupon_code\n      total_segments {\n        code\n        title\n        value\n        extension_attributes\n      }\n    }\n    has_gift_wrap\n    extension_attributes {\n      free_items {\n        sku\n        qty\n        cart_id\n        sales_rule_id\n        sales_rule_action_type\n        sales_rule_action_apply\n        product {\n          sku\n          name\n          image\n          price\n          special_price\n          extension_attributes {\n            salable\n          }\n          marketplace {\n            ...marketPlaceSellerFragment\n          }\n        }\n      }\n      free_items_added {\n        quote_id\n        item_id\n        sku\n        sales_rule_id\n        qty\n        intent_qty\n        for_item_id\n        associated_item_id\n        product {\n          sku\n          name\n          image\n          price\n          special_price\n          extension_attributes {\n            salable\n            brand {\n              ...productBrandFragment\n            }\n          }\n          marketplace {\n            ...marketPlaceSellerFragment\n          }\n        }\n      }\n      free_shipping_offer {\n        message\n      }\n      children {\n        id\n        items {\n          item_id\n          sku\n          qty\n          name\n          price\n          product_type\n          extension_attributes {\n            shipping_assignment {\n              shipping_method\n            }\n            parent_quote_item_id\n          }\n        }\n        items_count\n        items_qty\n        extension_attributes {\n          shipping_assignments {\n            shipping {\n              method\n              address {\n                id\n                region\n                region_id\n                street\n                telephone\n                postcode\n                city\n                firstname\n                lastname\n                email\n              }\n            }\n          }\n          retailer {\n            id\n            name\n            is_active\n            seller_code\n            attribute_set_name\n            custom_attributes {\n              url_key\n              show_contact_form\n              inventory_source\n              contact_phone\n              contact_fax\n            }\n            extension_attributes {\n              address {\n                id\n                retailer_id\n                coordinates {\n                  latitude\n                  longitude\n                }\n                region\n                region_id\n                country_id\n                street\n                postcode\n                city\n              }\n              opening_hours {\n                start_time\n                end_time\n              }\n              special_opening_hours\n              ispu_promise_delivery\n            }\n          }\n        }\n      }\n      shipping_assignments {\n        shipping {\n          method\n          address {\n            id\n            region\n            region_id\n            street\n            telephone\n            postcode\n            city\n            firstname\n            lastname\n            email\n          }\n        }\n      }\n      retailer {\n        id\n        name\n        is_active\n        seller_code\n        attribute_set_name\n        custom_attributes {\n          url_key\n          show_contact_form\n          inventory_source\n          contact_phone\n          contact_fax\n        }\n        extension_attributes {\n          address {\n            id\n            retailer_id\n            coordinates {\n              latitude\n              longitude\n            }\n            region\n            region_id\n            country_id\n            street\n            postcode\n            city\n          }\n          opening_hours {\n            start_time\n            end_time\n          }\n          special_opening_hours\n          ispu_promise_delivery\n        }\n      }\n    }\n  }\n}\n\nfragment productFragment on Product {\n  id\n  name\n  url_key\n  sku\n  breadcrumbs {\n    category_id\n    level\n    name\n    url\n  }\n  product_tags\n  visibility\n  status\n  type_id\n  image\n  small_image\n  thumbnail\n  description\n  short_description\n  price\n  price_min\n  price_max\n  sale_price_min\n  sale_price_max\n  special_price\n  special_from_date\n  special_to_date\n  meta_title\n  meta_keyword\n  meta_description\n  custom_attributes\n  custom_attributes_option\n  media_gallery_entries {\n    file\n    id\n    label\n    media_type\n    disabled\n    extension_attributes {\n      video_content {\n        media_type\n        video_provider\n        video_url\n        video_title\n        video_description\n        video_metadata\n      }\n    }\n  }\n  extension_attributes {\n    suggest_promotions {\n      promotion_name\n      full_condition\n      start_datetime\n      end_datetime\n    }\n    free_shipping_amount\n    brand {\n      ...productBrandFragment\n    }\n    stock_item {\n      qty\n      is_in_stock\n      min_sale_qty\n      max_sale_qty\n    }\n    t1c_redeemable_points\n    installment_plans {\n      ...installmentPlansFragment\n    }\n    specification_attributes {\n      attribute_code\n      label\n      value\n    }\n    overall_rating {\n      rating\n      total_vote\n      five_star\n      four_star\n      three_star\n      two_star\n      one_star\n    }\n    reviews {\n      nickname\n      rating_items {\n        rating_id\n        rating\n        category\n      }\n      created_at\n      title\n      detail\n      is_validate\n      region_id\n      images {\n        path\n      }\n    }\n    cc_promotions {\n      discount\n      bank_icon\n      bank_color\n      sales_rule_id\n      promotion_id\n    }\n    salable\n    ispu_salable\n    seller_url_key\n    category_paths {\n      category_id\n      name\n      level\n      parent_id\n    }\n    overlays {\n      overlay_image\n      overlay_status\n      mobile_overlay_status\n      overlay_start_date\n      overlay_end_date\n    }\n    configurable_product_links\n    size_map {\n      size\n      type\n    }\n    size_maps {\n      size\n      type\n    }\n    configurable_product_options {\n      id\n      attribute_id\n      label\n      position\n      values {\n        value_index\n        extension_attributes {\n          label\n          frontend_value\n          frontend_type\n          products\n        }\n      }\n    }\n  }\n  marketplace {\n    ...marketPlaceSellerFragment\n  }\n  isReview\n}\n\nfragment marketPlaceSellerFragment on MarketPlaceSeller {\n  seller_id\n  seller\n  seller_url_key\n}\n\nfragment productBrandFragment on ProductsExtensionAttributesBrand {\n  brand_id\n  name\n  url_key\n  logo\n  extension_attributes {\n    parent_category\n    menu_css\n    hide_t1c_redeemable_amount\n    hide_product_original_price\n    product_name_special\n  }\n}\n\nfragment installmentPlansFragment on InstallmentPlan {\n  installmentplan_id\n  name\n  bank_id\n  bank {\n    bank_id\n    bank_image\n    icon\n    active\n    color\n    name\n  }\n  currency\n  period\n  merchant_rate\n  customer_rate\n  min_amount\n  max_amount\n  active\n  valid_from\n  valid_until\n  create\n}\n\nfragment cartFragment on CartInterface {\n  __typename\n  id\n  items_count\n  items_qty\n  guest_id\n}\n&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://coreapi-v2.powerbuy.co.th/graphql_Step 1" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">[{&quot;operationName&quot;:&quot;cms&quot;,&quot;variables&quot;:{&quot;filter&quot;:{&quot;identifier&quot;:&quot;homepage_flash_sales&quot;}},&quot;query&quot;:&quot;query cms($filter: CmsFilterInput!) {\n  cms(filter: $filter) {\n    status\n    cms_list {\n      _id\n      identifier\n      name\n      url_key\n      updated_at\n      status\n      custom_field\n      layout_type\n      page_layout\n      contents {\n        css\n        js\n        html\n        instagram\n        meta\n      }\n      languages {\n        en {\n          css\n          html\n          meta\n          lang_code\n          _id\n          contents\n        }\n        th {\n          css\n          html\n          meta\n          lang_code\n          _id\n          contents\n        }\n      }\n    }\n  }\n}\n&quot;}]</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://coreapi-v2.powerbuy.co.th/graphql_Step 1" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;operationName&quot;:&quot;productSearch&quot;,&quot;variables&quot;:{&quot;filterGroups&quot;:[{&quot;filters&quot;:[{&quot;field&quot;:&quot;status&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;filters&quot;:[{&quot;field&quot;:&quot;visibility&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;filters&quot;:[{&quot;field&quot;:&quot;price&quot;,&quot;value&quot;:&quot;0&quot;,&quot;conditionType&quot;:&quot;gt&quot;}]},{&quot;filters&quot;:[{&quot;field&quot;:&quot;expr-p&quot;,&quot;value&quot;:&quot;(stock.salable=1 OR (stock.ispu_salable=1 AND shipping_methods=&apos;storepickup_ispu&apos;))&quot;}]},{&quot;filters&quot;:[{&quot;field&quot;:&quot;category_id&quot;,&quot;value&quot;:&quot;132794&quot;}]}],&quot;page&quot;:1,&quot;size&quot;:6},&quot;query&quot;:&quot;query productSearch($filterGroups: [FilterGroups]!, $page: Int!, $size: Int!, $sortOrders: [SortOrder]) {\n  productSearch(filter: {filterGroups: $filterGroups, sortOrders: $sortOrders, page: $page, size: $size}) {\n    total_count\n    sorting {\n      code\n      name\n    }\n    filters {\n      name\n      attribute_code\n      position\n      items {\n        label\n        value\n        count\n        custom_attributes {\n          parent_id\n          url_path\n          level\n          url_key\n        }\n      }\n    }\n    products {\n      id\n      name\n      visibility\n      url_key\n      sku\n      status\n      breadcrumbs {\n        category_id\n        level\n        name\n        url\n      }\n      type_id\n      image\n      small_image\n      thumbnail\n      short_description\n      price\n      special_price\n      special_from_date\n      special_to_date\n      custom_attributes\n      custom_attributes_option\n      media_gallery_entries {\n        file\n        id\n        label\n        media_type\n        disabled\n        extension_attributes {\n          video_content {\n            media_type\n            video_provider\n            video_url\n            video_title\n            video_description\n            video_metadata\n          }\n        }\n      }\n      extension_attributes {\n        stock_item {\n          qty\n          is_in_stock\n          min_sale_qty\n          max_sale_qty\n        }\n        t1c_redeemable_points\n        installment_plans {\n          ...installmentPlansFragment\n        }\n        overall_rating {\n          rating\n          total_vote\n          five_star\n          four_star\n          three_star\n          two_star\n          one_star\n        }\n        salable\n        ispu_salable\n        category_paths {\n          category_id\n          name\n          level\n          parent_id\n        }\n        overlays {\n          overlay_image\n          overlay_status\n          mobile_overlay_status\n          overlay_start_date\n          overlay_end_date\n        }\n        configurable_product_links\n      }\n    }\n  }\n}\n\nfragment installmentPlansFragment on InstallmentPlan {\n  installmentplan_id\n  name\n  bank_id\n  bank {\n    bank_id\n    bank_image\n    icon\n    active\n    color\n    name\n  }\n  currency\n  period\n  merchant_rate\n  customer_rate\n  min_amount\n  max_amount\n  active\n  valid_from\n  valid_until\n  create\n}\n&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Open any product detail page listed on home page_50%" enabled="true">
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <FloatProperty>
+            <name>ThroughputController.percentThroughput</name>
+            <value>50.0</value>
+            <savedValue>0.0</savedValue>
+          </FloatProperty>
+        </ThroughputController>
+        <hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Step 2: Open any product detail page listed on home page" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click to home-appliance" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/en/home-appliance</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://coreapi-v2.powerbuy.co.th/graphql_Step 2" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">[{&quot;operationName&quot;:&quot;cms&quot;,&quot;variables&quot;:{&quot;filter&quot;:{&quot;identifier&quot;:&quot;mega_menu_125278&quot;}},&quot;query&quot;:&quot;query cms($filter: CmsFilterInput!) {\n  cms(filter: $filter) {\n    status\n    cms_list {\n      _id\n      identifier\n      name\n      url_key\n      updated_at\n      status\n      custom_field\n      layout_type\n      page_layout\n      contents {\n        css\n        js\n        html\n        instagram\n        meta\n      }\n      languages {\n        en {\n          css\n          html\n          meta\n          lang_code\n          _id\n          contents\n        }\n        th {\n          css\n          html\n          meta\n          lang_code\n          _id\n          contents\n        }\n      }\n    }\n  }\n}\n&quot;}]</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://coreapi-v2.powerbuy.co.th/graphql_Step 2" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;operationName&quot;:&quot;urlRewrite&quot;,&quot;variables&quot;:{&quot;url&quot;:&quot;home-appliance&quot;},&quot;query&quot;:&quot;query urlRewrite($url: String!) {\n  urlRewrite(url: $url) {\n    description\n    entity_id\n    entity_type\n    request_path\n    target_path\n    redirect_type\n  }\n}\n&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://coreapi-v2.powerbuy.co.th/graphql_Step 2" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;operationName&quot;:&quot;category&quot;,&quot;variables&quot;:{&quot;categoryId&quot;:125278},&quot;query&quot;:&quot;query category($categoryId: ID!) {\n  category(id: $categoryId) {\n    id\n    parent_id\n    name\n    is_active\n    position\n    level\n    children\n    created_at\n    updated_at\n    include_in_menu\n    meta_title\n    meta_keywords\n    meta_description\n    children_count\n    url_key\n    url_path\n    is_virtual_category\n    virtual_category_root\n    description\n    path {\n      name\n      url_key\n      url_path\n      id\n    }\n    extension_attributes\n    custom_attributes\n    is_hide_display_price\n  }\n}\n&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://coreapi-v2.powerbuy.co.th/graphql_Step 2" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;operationName&quot;:&quot;productSearch&quot;,&quot;variables&quot;:{&quot;filterGroups&quot;:[{&quot;filters&quot;:[{&quot;field&quot;:&quot;status&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;filters&quot;:[{&quot;field&quot;:&quot;visibility&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;filters&quot;:[{&quot;field&quot;:&quot;expr-p&quot;,&quot;value&quot;:&quot;(stock.salable=1 OR (stock.ispu_salable=1 AND shipping_methods=&apos;storepickup_ispu&apos;))&quot;}]},{&quot;filters&quot;:[{&quot;field&quot;:&quot;price&quot;,&quot;value&quot;:&quot;0&quot;,&quot;conditionType&quot;:&quot;gt&quot;}]},{&quot;filters&quot;:[{&quot;field&quot;:&quot;category_id&quot;,&quot;value&quot;:&quot;125278&quot;}]}],&quot;page&quot;:1,&quot;size&quot;:48,&quot;sortOrders&quot;:null},&quot;query&quot;:&quot;query productSearch($filterGroups: [FilterGroups]!, $page: Int!, $size: Int!, $sortOrders: [SortOrder]) {\n  productSearch(filter: {filterGroups: $filterGroups, sortOrders: $sortOrders, page: $page, size: $size}) {\n    total_count\n    sorting {\n      code\n      name\n    }\n    filters {\n      name\n      attribute_code\n      position\n      items {\n        label\n        value\n        count\n        custom_attributes {\n          parent_id\n          url_path\n          level\n          url_key\n        }\n      }\n    }\n    products {\n      id\n      name\n      visibility\n      url_key\n      sku\n      status\n      breadcrumbs {\n        category_id\n        level\n        name\n        url\n      }\n      type_id\n      image\n      small_image\n      thumbnail\n      short_description\n      price\n      special_price\n      special_from_date\n      special_to_date\n      custom_attributes\n      custom_attributes_option\n      media_gallery_entries {\n        file\n        id\n        label\n        media_type\n        disabled\n        extension_attributes {\n          video_content {\n            media_type\n            video_provider\n            video_url\n            video_title\n            video_description\n            video_metadata\n          }\n        }\n      }\n      extension_attributes {\n        stock_item {\n          qty\n          is_in_stock\n          min_sale_qty\n          max_sale_qty\n        }\n        t1c_redeemable_points\n        installment_plans {\n          ...installmentPlansFragment\n        }\n        overall_rating {\n          rating\n          total_vote\n          five_star\n          four_star\n          three_star\n          two_star\n          one_star\n        }\n        salable\n        ispu_salable\n        category_paths {\n          category_id\n          name\n          level\n          parent_id\n        }\n        overlays {\n          overlay_image\n          overlay_status\n          mobile_overlay_status\n          overlay_start_date\n          overlay_end_date\n        }\n        configurable_product_links\n      }\n    }\n  }\n}\n\nfragment installmentPlansFragment on InstallmentPlan {\n  installmentplan_id\n  name\n  bank_id\n  bank {\n    bank_id\n    bank_image\n    icon\n    active\n    color\n    name\n  }\n  currency\n  period\n  merchant_rate\n  customer_rate\n  min_amount\n  max_amount\n  active\n  valid_from\n  valid_until\n  create\n}\n&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://coreapi-v2.powerbuy.co.th/graphql_Step 2" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">[{&quot;operationName&quot;:&quot;cms&quot;,&quot;variables&quot;:{&quot;filter&quot;:{&quot;identifier&quot;:&quot;category_header_undefined&quot;}},&quot;query&quot;:&quot;query cms($filter: CmsFilterInput!) {\n  cms(filter: $filter) {\n    status\n    cms_list {\n      _id\n      identifier\n      name\n      url_key\n      updated_at\n      status\n      custom_field\n      layout_type\n      page_layout\n      contents {\n        css\n        js\n        html\n        instagram\n        meta\n      }\n      languages {\n        en {\n          css\n          html\n          meta\n          lang_code\n          _id\n          contents\n        }\n        th {\n          css\n          html\n          meta\n          lang_code\n          _id\n          contents\n        }\n      }\n    }\n  }\n}\n&quot;}]</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://coreapi-v2.powerbuy.co.th/graphql_Step 2" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">[{&quot;operationName&quot;:&quot;cms&quot;,&quot;variables&quot;:{&quot;filter&quot;:{&quot;identifier&quot;:&quot;category_header_125278&quot;}},&quot;query&quot;:&quot;query cms($filter: CmsFilterInput!) {\n  cms(filter: $filter) {\n    status\n    cms_list {\n      _id\n      identifier\n      name\n      url_key\n      updated_at\n      status\n      custom_field\n      layout_type\n      page_layout\n      contents {\n        css\n        js\n        html\n        instagram\n        meta\n      }\n      languages {\n        en {\n          css\n          html\n          meta\n          lang_code\n          _id\n          contents\n        }\n        th {\n          css\n          html\n          meta\n          lang_code\n          _id\n          contents\n        }\n      }\n    }\n  }\n}\n&quot;},{&quot;operationName&quot;:&quot;cms&quot;,&quot;variables&quot;:{&quot;filter&quot;:{&quot;identifier&quot;:&quot;category_description_125278&quot;}},&quot;query&quot;:&quot;query cms($filter: CmsFilterInput!) {\n  cms(filter: $filter) {\n    status\n    cms_list {\n      _id\n      identifier\n      name\n      url_key\n      updated_at\n      status\n      custom_field\n      layout_type\n      page_layout\n      contents {\n        css\n        js\n        html\n        instagram\n        meta\n      }\n      languages {\n        en {\n          css\n          html\n          meta\n          lang_code\n          _id\n          contents\n        }\n        th {\n          css\n          html\n          meta\n          lang_code\n          _id\n          contents\n        }\n      }\n    }\n  }\n}\n&quot;}]</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://coreapi-v2.powerbuy.co.th/graphql_Step 2" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;operationName&quot;:&quot;promotion&quot;,&quot;variables&quot;:{&quot;filter&quot;:{&quot;filterGroups&quot;:[{&quot;filters&quot;:[{&quot;field&quot;:&quot;sku&quot;,&quot;value&quot;:&quot;242502,242500,247343,204462,241685,219392,244075,232725,238571,228541,238557,232218,238563,243023,231443,237738,238396,218607,241715,209177,241402,247817,238034,255966,248378,247815,255978,253023,247285,249700,253488,238491,238685,249256,215044,239066,255972,229518,MKP0230593,255736,246701,238035,215942,255409,231293,241697,238412,154000&quot;,&quot;conditionType&quot;:&quot;in&quot;}]}]}},&quot;query&quot;:&quot;query promotion($filter: FiltersQuery) {\n  promotionSuggestion(filter: $filter) {\n    sku\n    extension_attributes {\n      credit_card_promotions {\n        promotion_id\n        bank_icon\n        bank_color\n        simple_action\n        is_active\n        discount_amount\n      }\n      t1c {\n        redemption_rate\n        redeemable_points\n        redeemable_amounts\n        is_active\n      }\n      bundles {\n        products {\n          sku\n        }\n        discount_amount\n        discount_qty\n        discount_step\n        is_active\n        total_price\n        total_discount_amount\n        total_price_with_discount\n      }\n      free_items {\n        freebies {\n          sku\n          qty\n        }\n        is_active\n      }\n      all_applicable_rules {\n        rule_id\n        name\n        description\n        extension_attributes\n      }\n      tier_price {\n        id\n        name\n        amount\n        extension_attributes {\n          qty_from\n          qty_to\n          applicable_store_ids\n        }\n        type\n      }\n    }\n  }\n}\n&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Add the product to cart_30%" enabled="true">
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <FloatProperty>
+            <name>ThroughputController.percentThroughput</name>
+            <value>30.0</value>
+            <savedValue>0.0</savedValue>
+          </FloatProperty>
+        </ThroughputController>
+        <hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Step 3: Add the product to cart" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add Item" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;operationName&quot;:&quot;addCartItem&quot;,&quot;variables&quot;:{&quot;isGuest&quot;:true,&quot;cartId&quot;:&quot;Kq1sBkU9jIZwTodFXd8FAZ8eJET4hryQ&quot;,&quot;input&quot;:{&quot;sku&quot;:&quot;204462&quot;,&quot;qty&quot;:1,&quot;quote_id&quot;:&quot;Kq1sBkU9jIZwTodFXd8FAZ8eJET4hryQ&quot;}},&quot;query&quot;:&quot;mutation addCartItem($isGuest: Boolean, $cartId: String, $input: AddToCartInput!) {\n  addCartItem(isGuest: $isGuest, cartId: $cartId, input: $input) {\n    item_id\n    sku\n    qty\n    extension_attributes {\n      quote_id_to_update\n    }\n  }\n}\n&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Display Cart" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;operationName&quot;:&quot;cart&quot;,&quot;variables&quot;:{&quot;isGuest&quot;:true,&quot;cartId&quot;:&quot;Kq1sBkU9jIZwTodFXd8FAZ8eJET4hryQ&quot;},&quot;query&quot;:&quot;query cart($isGuest: Boolean, $cartId: String) {\n  cart(isGuest: $isGuest, cartId: $cartId) {\n    ...cartFragment\n    items {\n      item_id\n      sku\n      qty\n      name\n      price\n      product_type\n      quote_id\n      row_total\n      row_total_incl_tax\n      row_total_with_discount\n      tax_amount\n      discount_percent\n      discount_amount\n      price_incl_tax\n      total_price\n      extension_attributes {\n        free_items {\n          sku\n          qty\n          cart_id\n          sales_rule_id\n          sales_rule_action_type\n          sales_rule_action_apply\n          product {\n            sku\n            name\n            image\n            price\n            special_price\n            extension_attributes {\n              salable\n            }\n            marketplace {\n              ...marketPlaceSellerFragment\n            }\n          }\n        }\n        free_items_added {\n          quote_id\n          item_id\n          sku\n          sales_rule_id\n          qty\n          intent_qty\n          for_item_id\n          associated_item_id\n          product {\n            sku\n            name\n            image\n            price\n            special_price\n            extension_attributes {\n              salable\n              brand {\n                ...productBrandFragment\n              }\n            }\n            custom_attributes_option\n            marketplace {\n              ...marketPlaceSellerFragment\n            }\n          }\n        }\n        shipping_assignment {\n          shipping_method\n        }\n        salable_quantity\n        configurable_product_labels\n        parent_sku\n      }\n      row_total\n      row_total_incl_tax\n      row_total_with_discount\n      tax_amount\n      discount_percent\n      discount_amount\n      price_incl_tax\n      options {\n        label\n        value\n      }\n      product {\n        ...productFragment\n      }\n    }\n    totals {\n      grand_total\n      base_grand_total\n      subtotal\n      discount_amount\n      subtotal_with_discount\n      shipping_amount\n      shipping_discount_amount\n      tax_amount\n      shipping_tax_amount\n      subtotal_incl_tax\n      shipping_incl_tax\n      extension_attributes {\n        surcharge\n        t1c_earn_points_estimate\n        t1c_maximum_redeemable_points\n      }\n      coupon_code\n      total_segments {\n        code\n        title\n        value\n        extension_attributes\n      }\n    }\n    has_gift_wrap\n    extension_attributes {\n      free_items {\n        sku\n        qty\n        cart_id\n        sales_rule_id\n        sales_rule_action_type\n        sales_rule_action_apply\n        product {\n          sku\n          name\n          image\n          price\n          special_price\n          extension_attributes {\n            salable\n          }\n          marketplace {\n            ...marketPlaceSellerFragment\n          }\n        }\n      }\n      free_items_added {\n        quote_id\n        item_id\n        sku\n        sales_rule_id\n        qty\n        intent_qty\n        for_item_id\n        associated_item_id\n        product {\n          sku\n          name\n          image\n          price\n          special_price\n          extension_attributes {\n            salable\n            brand {\n              ...productBrandFragment\n            }\n          }\n          marketplace {\n            ...marketPlaceSellerFragment\n          }\n        }\n      }\n      free_shipping_offer {\n        message\n      }\n      children {\n        id\n        items {\n          item_id\n          sku\n          qty\n          name\n          price\n          product_type\n          extension_attributes {\n            shipping_assignment {\n              shipping_method\n            }\n            parent_quote_item_id\n          }\n        }\n        items_count\n        items_qty\n        extension_attributes {\n          shipping_assignments {\n            shipping {\n              method\n              address {\n                id\n                region\n                region_id\n                street\n                telephone\n                postcode\n                city\n                firstname\n                lastname\n                email\n              }\n            }\n          }\n          retailer {\n            id\n            name\n            is_active\n            seller_code\n            attribute_set_name\n            custom_attributes {\n              url_key\n              show_contact_form\n              inventory_source\n              contact_phone\n              contact_fax\n            }\n            extension_attributes {\n              address {\n                id\n                retailer_id\n                coordinates {\n                  latitude\n                  longitude\n                }\n                region\n                region_id\n                country_id\n                street\n                postcode\n                city\n              }\n              opening_hours {\n                start_time\n                end_time\n              }\n              special_opening_hours\n              ispu_promise_delivery\n            }\n          }\n        }\n      }\n      shipping_assignments {\n        shipping {\n          method\n          address {\n            id\n            region\n            region_id\n            street\n            telephone\n            postcode\n            city\n            firstname\n            lastname\n            email\n          }\n        }\n      }\n      retailer {\n        id\n        name\n        is_active\n        seller_code\n        attribute_set_name\n        custom_attributes {\n          url_key\n          show_contact_form\n          inventory_source\n          contact_phone\n          contact_fax\n        }\n        extension_attributes {\n          address {\n            id\n            retailer_id\n            coordinates {\n              latitude\n              longitude\n            }\n            region\n            region_id\n            country_id\n            street\n            postcode\n            city\n          }\n          opening_hours {\n            start_time\n            end_time\n          }\n          special_opening_hours\n          ispu_promise_delivery\n        }\n      }\n    }\n  }\n}\n\nfragment productFragment on Product {\n  id\n  name\n  url_key\n  sku\n  breadcrumbs {\n    category_id\n    level\n    name\n    url\n  }\n  product_tags\n  visibility\n  status\n  type_id\n  image\n  small_image\n  thumbnail\n  description\n  short_description\n  price\n  price_min\n  price_max\n  sale_price_min\n  sale_price_max\n  special_price\n  special_from_date\n  special_to_date\n  meta_title\n  meta_keyword\n  meta_description\n  custom_attributes\n  custom_attributes_option\n  media_gallery_entries {\n    file\n    id\n    label\n    media_type\n    disabled\n    extension_attributes {\n      video_content {\n        media_type\n        video_provider\n        video_url\n        video_title\n        video_description\n        video_metadata\n      }\n    }\n  }\n  extension_attributes {\n    suggest_promotions {\n      promotion_name\n      full_condition\n      start_datetime\n      end_datetime\n    }\n    free_shipping_amount\n    brand {\n      ...productBrandFragment\n    }\n    stock_item {\n      qty\n      is_in_stock\n      min_sale_qty\n      max_sale_qty\n    }\n    t1c_redeemable_points\n    installment_plans {\n      ...installmentPlansFragment\n    }\n    specification_attributes {\n      attribute_code\n      label\n      value\n    }\n    overall_rating {\n      rating\n      total_vote\n      five_star\n      four_star\n      three_star\n      two_star\n      one_star\n    }\n    reviews {\n      nickname\n      rating_items {\n        rating_id\n        rating\n        category\n      }\n      created_at\n      title\n      detail\n      is_validate\n      region_id\n      images {\n        path\n      }\n    }\n    cc_promotions {\n      discount\n      bank_icon\n      bank_color\n      sales_rule_id\n      promotion_id\n    }\n    salable\n    ispu_salable\n    seller_url_key\n    category_paths {\n      category_id\n      name\n      level\n      parent_id\n    }\n    overlays {\n      overlay_image\n      overlay_status\n      mobile_overlay_status\n      overlay_start_date\n      overlay_end_date\n    }\n    configurable_product_links\n    size_map {\n      size\n      type\n    }\n    size_maps {\n      size\n      type\n    }\n    configurable_product_options {\n      id\n      attribute_id\n      label\n      position\n      values {\n        value_index\n        extension_attributes {\n          label\n          frontend_value\n          frontend_type\n          products\n        }\n      }\n    }\n  }\n  marketplace {\n    ...marketPlaceSellerFragment\n  }\n  isReview\n}\n\nfragment marketPlaceSellerFragment on MarketPlaceSeller {\n  seller_id\n  seller\n  seller_url_key\n}\n\nfragment productBrandFragment on ProductsExtensionAttributesBrand {\n  brand_id\n  name\n  url_key\n  logo\n  extension_attributes {\n    parent_category\n    menu_css\n    hide_t1c_redeemable_amount\n    hide_product_original_price\n    product_name_special\n  }\n}\n\nfragment installmentPlansFragment on InstallmentPlan {\n  installmentplan_id\n  name\n  bank_id\n  bank {\n    bank_id\n    bank_image\n    icon\n    active\n    color\n    name\n  }\n  currency\n  period\n  merchant_rate\n  customer_rate\n  min_amount\n  max_amount\n  active\n  valid_from\n  valid_until\n  create\n}\n\nfragment cartFragment on CartInterface {\n  __typename\n  id\n  items_count\n  items_qty\n  guest_id\n}\n&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">graphql</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="x-product-attr-option" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr-option</stringProp>
+                    <stringProp name="Header.value">brand</stringProp>
+                  </elementProp>
+                  <elementProp name="bu" elementType="Header">
+                    <stringProp name="Header.name">bu</stringProp>
+                    <stringProp name="Header.value">pwb</stringProp>
+                  </elementProp>
+                  <elementProp name="client" elementType="Header">
+                    <stringProp name="Header.name">client</stringProp>
+                    <stringProp name="Header.value">web</stringProp>
+                  </elementProp>
+                  <elementProp name="content-type" elementType="Header">
+                    <stringProp name="Header.name">content-type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="accept" elementType="Header">
+                    <stringProp name="Header.name">accept</stringProp>
+                    <stringProp name="Header.value">*/*</stringProp>
+                  </elementProp>
+                  <elementProp name="store" elementType="Header">
+                    <stringProp name="Header.name">store</stringProp>
+                    <stringProp name="Header.value">en</stringProp>
+                  </elementProp>
+                  <elementProp name="x-product-attr" elementType="Header">
+                    <stringProp name="Header.name">x-product-attr</stringProp>
+                    <stringProp name="Header.value">free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
